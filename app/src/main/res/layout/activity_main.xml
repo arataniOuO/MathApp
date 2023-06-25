@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="es.aratani.mathapp.MainActivity"
+    android:padding="15dp"
+    >
+
+    <TextView
+        android:id="@+id/operation"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:textColor="@color/black"
+        />
+
+
+
+    <EditText
+        android:id="@+id/answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/purple_200"
+        android:inputType="numberDecimal|numberSigned"
+        android:imeActionLabel=""
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="REFRESH"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:onClick="Refresh"
+            android:layout_weight="1.0"
+            android:layout_margin="5dp"
+            />
+
+        <Button
+            android:id="@+id/check"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:text="CHECK"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:onClick="Check"
+            android:layout_weight="1.0"
+            android:layout_margin="5dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/combo"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/easy"
+            android:tag="0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_margin="5dp"
+            android:text="EASY"
+            android:backgroundTint="@color/green"
+            android:onClick="SetDifficulty"
+            />
+        <Button
+            android:id="@+id/medium"
+            android:tag="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_margin="5dp"
+            android:text="MEDIUM"
+            android:backgroundTint="@color/orange"
+            android:onClick="SetDifficulty"
+            />
+        <Button
+            android:id="@+id/hard"
+            android:tag="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_margin="5dp"
+            android:text="HARD"
+            android:backgroundTint="@color/red"
+            android:onClick="SetDifficulty"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_gravity="center"
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2225619307169897/5734689473"
+        >
+    </com.google.android.gms.ads.AdView>
+
+
+</LinearLayout>
